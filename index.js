@@ -54,7 +54,7 @@ jwt.verify(token,process.env.ACCESS_TOKEN_SECRETE,(error,decoded)=>{
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
 
 // ---declare this for getting the data and collection from database--
     const servicesCollection = client.db('carDoctor').collection('services');
@@ -154,8 +154,8 @@ app.patch('/bookings/:id',async(req,res)=>{
 
 
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    // await client.db("admin").command({ ping: 1 });
+    // console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error
     // await client.close();
